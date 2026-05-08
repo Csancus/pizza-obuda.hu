@@ -112,7 +112,8 @@
     "sameAs": [
       "https://www.facebook.com/dalmichelepizzeria/",
       "https://www.instagram.com/dalmichele/",
-      "https://www.dalmichele.hu/"
+      "https://www.dalmichele.hu/",
+      "https://www.google.com/maps/place/D%27Al+Michele+Pizzeria+%C3%A9s+Bisztr%C3%B3/@47.5378851,19.0408607,17z/data=!4m6!3m5!1s0x4741d98e0be9c8fd:0x7c1c1702ee3dba45!8m2!3d47.5295163!4d19.038525!16s%2Fg%2F11h88tw4h_"
     ],
     "areaServed": [
       {"@type": "AdministrativeArea", "name": "Budapest III. kerület"},
@@ -973,6 +974,29 @@
       .nav__logo { font-size: 1rem; }
       .contact-card--phone .contact-card__value { font-size: 1.2rem; }
     }
+
+    .google-review-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 22px;
+      background: #fff;
+      border: 1.5px solid #d4e6d5;
+      border-radius: 100px;
+      text-decoration: none !important;
+      font-size: 0.95rem;
+      margin-top: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: all .2s ease;
+    }
+    .google-review-banner:hover {
+      border-color: var(--a);
+      transform: translateY(-1px);
+    }
+    .grb-stars { color: #f4a800; letter-spacing: 1.5px; font-size: 1rem; }
+    .grb-rating { font-weight: 800; color: var(--p); }
+    .grb-text { color: var(--text-muted); }
+    .grb-arrow { color: var(--a); font-weight: 700; }
   </style>
 </head>
 <body>
@@ -1116,6 +1140,12 @@
       <span class="section-head__label">Vendégeink mondják</span>
       <h2 class="section-head__h2">Amit a vendégek mondanak óbudai pizzériánkról</h2>
       <p class="section-head__sub">Valódi vélemények valódi emberektől – akik visszatérnek.</p>
+      <a href="https://www.google.com/maps/place/D%27Al+Michele+Pizzeria+%C3%A9s+Bisztr%C3%B3/@47.5378851,19.0408607,17z/data=!4m6!3m5!1s0x4741d98e0be9c8fd:0x7c1c1702ee3dba45!8m2!3d47.5295163!4d19.038525!16s%2Fg%2F11h88tw4h_" target="_blank" rel="noopener" class="google-review-banner" aria-label="D'Al Michele Pizzeria Google vélemények">
+        <span class="grb-stars">★★★★★</span>
+        <span class="grb-rating">4.9</span>
+        <span class="grb-text">· 499 vélemény Google-ön</span>
+        <span class="grb-arrow">→</span>
+      </a>
     </div>
     <div class="reviews__grid">
       <article class="review-card">

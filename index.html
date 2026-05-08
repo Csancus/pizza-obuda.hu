@@ -967,9 +967,10 @@
       .strip__grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     }
 
-    .nav__burger { display: none; }
-    @media (max-width: 700px) {
+    .nav__burger { display: none; order: 99; }
+    @media (max-width: 768px) {
       .nav__links { display: none; }
+      .nav__phone { display: none !important; }
       .nav__burger {
         display: inline-flex;
         align-items: center;
@@ -983,7 +984,6 @@
         min-height: 44px;
         min-width: 44px;
         border-radius: 8px;
-        order: 99;
       }
       .nav__toggle:checked ~ .nav__links {
         display: flex !important;

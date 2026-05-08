@@ -9,6 +9,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#2a4a2e" />
   <link rel="canonical" href="https://www.pizza-obuda.hu/" />
+  <link rel="preload" as="image" href="/hero.webp" fetchpriority="high" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -22,13 +23,15 @@
   <meta property="og:site_name" content="D'Al Michele Pizzeria" />
   <meta property="og:locale" content="hu_HU" />
 
-  <meta property="og:image" content="https://pizza-obuda.hu/favicon.svg" />
+  <meta property="og:image" content="https://www.pizza-obuda.hu/hero.jpg" />
+  <meta property="og:image:width" content="730" />
+  <meta property="og:image:height" content="600" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pizza Óbuda – autentikus olasz pizzéria | D'Al Michele" />
   <meta name="twitter:description" content="Pizza Óbuda – autentikus nápolyi pizza a Bécsi úton, kőkemencéből a D'Al Michele Pizzériában. Tel: +36 30 221 0230" />
-  <meta name="twitter:image" content="https://pizza-obuda.hu/favicon.svg" />
+  <meta name="twitter:image" content="https://www.pizza-obuda.hu/hero.jpg" />
 
   <!-- Geo tags -->
   <meta name="geo.region" content="HU-BU" />
@@ -80,7 +83,7 @@
       "bestRating": "5",
       "worstRating": "1"
     },
-    "image": "https://pizza-obuda.hu/favicon.svg",
+    "image": "https://www.pizza-obuda.hu/hero.jpg",
     "url": "https://www.dalmichele.hu/",
     "telephone": "+36302210230",
     "email": "dalmichele2019@gmail.com",
@@ -316,10 +319,31 @@
     .hero__inner {
       max-width: 1100px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 48px;
+      align-items: center;
     }
 
     .hero__content {
       max-width: 680px;
+    }
+
+    .hero__image {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(42,74,46,.18);
+      aspect-ratio: 730 / 600;
+    }
+    .hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 800px) {
+      .hero__inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero__image { max-width: 540px; margin: 0 auto; }
     }
 
     .hero__eyebrow {
@@ -1069,6 +1093,20 @@
           <a href="tel:+36302210230" class="btn btn--primary">📞 +36 30 221 0230</a>
           <a href="https://www.dalmichele.hu/menu/" target="_blank" rel="noopener" class="btn btn--outline">Nézd meg az étlapot →</a>
         </div>
+      </div>
+      <div class="hero__image">
+        <picture>
+          <source srcset="/hero.webp" type="image/webp">
+          <img
+            src="/hero.jpg"
+            alt="Pizza Óbuda – autentikus nápolyi pizza a D'Al Michele Pizzeriában, Bécsi út 65., Óbuda"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="730"
+            height="600"
+          />
+        </picture>
       </div>
     </div>
   </section>

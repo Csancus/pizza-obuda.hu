@@ -948,8 +948,42 @@
       .strip__grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     }
 
+    .nav__burger { display: none; }
     @media (max-width: 700px) {
-      .nav__links li:not(:last-child) { display: none; }
+      .nav__links { display: none; }
+      .nav__burger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.5rem;
+        line-height: 1;
+        padding: 8px 14px;
+        color: var(--p);
+        user-select: none;
+        min-height: 44px;
+        min-width: 44px;
+        border-radius: 8px;
+      }
+      .nav__toggle:checked ~ .nav__links {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(0,0,0,.12);
+        padding: 8px 0;
+        min-width: 220px;
+        border-radius: 0 0 12px 12px;
+        z-index: 200;
+        gap: 0;
+      }
+      .nav__toggle:checked ~ .nav__links li { width: 100%; }
+      .nav__toggle:checked ~ .nav__links a {
+        padding: 14px 22px;
+        width: 100%;
+      }
       .features__grid { grid-template-columns: 1fr; }
       .reviews__grid { grid-template-columns: 1fr; }
       .contact__grid { grid-template-columns: 1fr; }
@@ -1006,6 +1040,7 @@
   <nav class="nav" aria-label="Főmenü">
     <div class="nav__inner">
       <a href="/" class="nav__logo">D'Al <span>Michele</span> Pizzeria</a>
+      <input type="checkbox" id="nav-toggle" class="nav__toggle" hidden>
       <ul class="nav__links" role="list">
         <li><a href="#features">Miért mi?</a></li>
         <li><a href="#about">Rólunk</a></li>
@@ -1018,6 +1053,7 @@
           </a>
         </li>
       </ul>
+      <label for="nav-toggle" class="nav__burger" aria-label="Menü megnyitása">☰</label>
     </div>
   </nav>
 

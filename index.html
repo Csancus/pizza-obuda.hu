@@ -230,7 +230,7 @@
       font-size: 0.95rem;
       font-weight: 700;
       color: var(--white) !important;
-      background: var(--a) !important;
+      background: var(--p) !important;
       border-radius: 8px;
       padding: 9px 18px !important;
       white-space: nowrap;
@@ -240,9 +240,12 @@
     }
 
     .nav__phone:hover {
-      background: var(--p) !important;
+      background: #1e3621 !important;
       transform: translateY(-1px);
     }
+
+    .nav__logo span { color: #2f6334; }
+    .strip__label { color: rgba(255,255,255,0.72) !important; }
 
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
@@ -927,7 +930,7 @@
         <li><a href="#faq">GYIK</a></li>
         <li><a href="#contact">Kapcsolat</a></li>
         <li>
-          <a href="tel:+36302210230" class="nav__phone" aria-label="Telefonszám hívása">
+          <a href="tel:+36302210230" class="nav__phone">
             📞 +36 30 221 0230
           </a>
         </li>
@@ -935,6 +938,7 @@
     </div>
   </nav>
 
+  <main>
   <!-- HERO -->
   <section class="hero">
     <div class="hero__inner">
@@ -1191,6 +1195,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">

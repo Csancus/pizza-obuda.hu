@@ -8,7 +8,7 @@
   <meta name="keywords" content="pizza óbuda, pizzeria óbuda, olasz pizza budapest, kőkemence pizza, D'Al Michele, bécsi út pizza, pizza 1036" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#2a4a2e" />
-  <link rel="canonical" href="https://pizza-obuda.hu/" />
+  <link rel="canonical" href="https://www.pizza-obuda.hu/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,7 +18,7 @@
   <meta property="og:type" content="restaurant" />
   <meta property="og:title" content="D'Al Michele Pizzeria – Pizza Óbuda" />
   <meta property="og:description" content="Autentikus olasz pizza kőkemencéből, friss olasz alapanyagokból. Óbuda legjobb pizzériája – 1036 Budapest, Bécsi út 65." />
-  <meta property="og:url" content="https://pizza-obuda.hu/" />
+  <meta property="og:url" content="https://www.pizza-obuda.hu/" />
   <meta property="og:site_name" content="D'Al Michele Pizzeria" />
   <meta property="og:locale" content="hu_HU" />
 
@@ -39,11 +39,38 @@
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-  <!-- JSON-LD: Restaurant -->
+  <!-- JSON-LD: WebSite + Organization + Restaurant + ItemList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.pizza-obuda.hu/#website",
+        "url": "https://www.pizza-obuda.hu/",
+        "name": "Pizza Óbuda – D'Al Michele Pizzeria",
+        "description": "Autentikus olasz pizza Óbudán, kőkemencéből, friss olasz alapanyagokból.",
+        "inLanguage": "hu-HU",
+        "publisher": {"@id": "https://www.pizza-obuda.hu/#organization"}
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.pizza-obuda.hu/#organization",
+        "name": "D'Al Michele Pizzeria",
+        "url": "https://www.pizza-obuda.hu/",
+        "logo": {"@type": "ImageObject", "url": "https://www.pizza-obuda.hu/favicon.svg"},
+        "telephone": "+36302210230",
+        "email": "dalmichele2019@gmail.com",
+        "foundingDate": "2019",
+        "sameAs": [
+          "https://www.facebook.com/dalmichelepizzeria/",
+          "https://www.instagram.com/dalmichele/",
+          "https://www.dalmichele.hu/"
+        ]
+      },
+      {
+    "@type": ["Restaurant", "FoodEstablishment"],
+    "@id": "https://www.pizza-obuda.hu/#restaurant",
     "name": "D'Al Michele Pizzeria",
     "image": "https://pizza-obuda.hu/favicon.svg",
     "url": "https://www.dalmichele.hu/",
@@ -73,7 +100,26 @@
     "priceRange": "$$",
     "sameAs": [
       "https://www.facebook.com/dalmichelepizzeria/",
-      "https://www.instagram.com/dalmichele/"
+      "https://www.instagram.com/dalmichele/",
+      "https://www.dalmichele.hu/"
+    ],
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "Budapest III. kerület"},
+      {"@type": "Place", "name": "Óbuda"}
+    ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.pizza-obuda.hu/#pizzas",
+        "name": "D'Al Michele pizza kínálat",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "item": {"@type": "MenuItem", "name": "Margherita pizza", "description": "Klasszikus nápolyi alappizza San Marzano paradicsommal és valódi mozzarellával."}},
+          {"@type": "ListItem", "position": 2, "item": {"@type": "MenuItem", "name": "Quattro Stagioni", "description": "Négy évszak pizza – sonka, gomba, articsóka, olajbogyó."}},
+          {"@type": "ListItem", "position": 3, "item": {"@type": "MenuItem", "name": "Vegetáriánus pizzák", "description": "Friss szezonális zöldségekkel és prémium olasz sajtokkal."}},
+          {"@type": "ListItem", "position": 4, "item": {"@type": "Service", "name": "Kőkemence sütés", "description": "Hagyományos kőkemencében sütött pizzák, jellegzetes nápolyi karakterrel."}},
+          {"@type": "ListItem", "position": 5, "item": {"@type": "Service", "name": "Elvitel", "description": "Frissen sütött pizza elvitelre is, gondos csomagolásban."}}
+        ]
+      }
     ]
   }
   </script>
@@ -83,6 +129,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://www.pizza-obuda.hu/#faq",
     "mainEntity": [
       {
         "@type": "Question",

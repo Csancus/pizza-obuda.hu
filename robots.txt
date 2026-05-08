@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pizza-obuda.hu/sitemap.xml
+Sitemap: https://www.pizza-obuda.hu/sitemap.xml

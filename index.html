@@ -417,9 +417,10 @@
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
     }
+    .strip__value { word-break: break-word; }
 
     .strip__item {
       display: flex;
@@ -1321,7 +1322,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2024 D'Al Michele Pizzeria. Minden jog fenntartva.</p>
+        <p class="footer__copy">&copy; 2026 D'Al Michele Pizzeria. Minden jog fenntartva.</p>
         <p class="footer__address">1036 Budapest, Bécsi út 65. &nbsp;|&nbsp; <a href="tel:+36302210230">+36 30 221 0230</a></p>
       </div>
     </div>

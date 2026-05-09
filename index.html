@@ -1407,5 +1407,17 @@
     </div>
   </footer>
 
+<script>
+(function(){
+  var t=document.getElementById('nav-toggle');
+  if(!t)return;
+  document.addEventListener('click',function(e){
+    if(t.checked&&!e.target.closest('nav'))t.checked=false;
+  });
+  document.querySelectorAll('.nav__links a').forEach(function(a){
+    a.addEventListener('click',function(){t.checked=false;});
+  });
+})();
+</script>
 </body>
 </html>

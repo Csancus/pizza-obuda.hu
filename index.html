@@ -317,7 +317,7 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       gap: 48px;
-      align-items: center;
+      align-items: start;
     }
 
     .hero__content {
@@ -325,17 +325,14 @@
     }
 
     .hero__image {
-      position: relative;
-      height: 0;
-      padding-top: 82.2%; /* 600/730 — stable before image loads */
       border-radius: 18px;
       overflow: hidden;
       box-shadow: 0 12px 40px rgba(42,74,46,.18);
+      aspect-ratio: 730 / 600;
     }
-    .hero__image picture,
     .hero__image img {
-      position: absolute;
-      inset: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       display: block;
     }

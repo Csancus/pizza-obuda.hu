@@ -1043,25 +1043,31 @@
     .google-review-banner {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 11px 22px;
+      flex-wrap: wrap;
+      row-gap: 2px;
+      column-gap: 6px;
+      padding: 10px 18px;
       background: #fff;
-      border: 1.5px solid #d4e6d5;
+      border: 1.5px solid rgba(0,0,0,.1);
       border-radius: 100px;
       text-decoration: none !important;
-      font-size: 0.95rem;
-      margin-top: 14px;
-      box-shadow: var(--shadow-sm);
-      transition: all .2s ease;
+      font-size: 0.88rem;
+      margin-top: 20px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      transition: box-shadow .2s, transform .15s;
+      max-width: 100%;
     }
     .google-review-banner:hover {
-      border-color: var(--a);
+      box-shadow: 0 4px 14px rgba(0,0,0,.1);
       transform: translateY(-1px);
+      border-color: rgba(0,0,0,.2);
     }
-    .grb-stars { color: #f4a800; letter-spacing: 1.5px; font-size: 1rem; }
-    .grb-rating { font-weight: 800; color: var(--p); }
-    .grb-text { color: var(--text-muted); }
-    .grb-arrow { color: var(--a); font-weight: 700; }
+    .grb-stars { color: #f4a800; letter-spacing: 1px; font-size: 0.92rem; line-height: 1; flex-shrink: 0; }
+    .grb-rating { font-weight: 800; color: var(--p); font-size: 0.9rem; }
+    .grb-sep { color: #bbb; font-size: 0.8rem; margin: 0 -1px; line-height: 1; }
+    .grb-text { color: #888; font-size: 0.85rem; }
+    .grb-arrow { color: var(--a); font-weight: 700; margin-left: 2px; font-size: 0.9rem; }
   </style>
 </head>
 <body>
@@ -1224,7 +1230,7 @@
       <a href="https://www.google.com/maps/place/D%27Al+Michele+Pizzeria+%C3%A9s+Bisztr%C3%B3/@47.5378851,19.0408607,17z/data=!4m6!3m5!1s0x4741d98e0be9c8fd:0x7c1c1702ee3dba45!8m2!3d47.5295163!4d19.038525!16s%2Fg%2F11h88tw4h_" target="_blank" rel="noopener" class="google-review-banner" aria-label="D'Al Michele Pizzeria Google vélemények">
         <span class="grb-stars">★★★★★</span>
         <span class="grb-rating">4.9</span>
-        <span class="grb-text">· 499 vélemény Google-ön</span>
+        <span class="grb-sep" aria-hidden="true">·</span><span class="grb-text">499 vélemény Google-ön</span>
         <span class="grb-arrow">→</span>
       </a>
     </div>

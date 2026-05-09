@@ -971,6 +971,7 @@
     @media (max-width: 768px) {
       .nav__links { display: none; }
       .nav__phone { display: none !important; }
+      .nav__toggle:checked ~ .nav__links .nav__phone { display: block !important; color: var(--a) !important; font-weight: 700 !important; padding-left: 22px !important; }
       .nav__burger {
         display: inline-flex;
         align-items: center;

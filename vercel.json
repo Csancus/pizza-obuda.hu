@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "pizza-obuda.hu" }],
+      "destination": "https://www.pizza-obuda.hu/:path*",
+      "permanent": true
+    }
+  ]
+}

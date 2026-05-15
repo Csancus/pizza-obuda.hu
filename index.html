@@ -9,7 +9,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#2a4a2e" />
   <link rel="canonical" href="https://www.pizza-obuda.hu/" />
-  <link rel="preload" as="image" href="/hero.webp" fetchpriority="high" />
+  <link rel="preload" as="image" imagesrcset="/hero-sm.webp 480w, /hero.webp 730w" imagesizes="(max-width: 768px) 480px, 420px" fetchpriority="high" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -1108,9 +1108,11 @@
       </div>
       <div class="hero__image">
         <picture>
-          <source srcset="/hero.webp" type="image/webp">
+          <source type="image/webp" srcset="/hero-sm.webp 480w, /hero.webp 730w" sizes="(max-width: 768px) 480px, 420px">
           <img
             src="/hero.jpg"
+            srcset="/hero-sm.jpg 480w, /hero.jpg 730w"
+            sizes="(max-width: 768px) 480px, 420px"
             alt="Pizza Óbuda – autentikus nápolyi pizza a D'Al Michele Pizzeriában, Bécsi út 65., Óbuda"
             loading="eager"
             fetchpriority="high"

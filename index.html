@@ -1417,12 +1417,19 @@
 <script>
 (function(){
   var t=document.getElementById('nav-toggle');
-  if(!t)return;
-  document.addEventListener('click',function(e){
-    if(t.checked&&!e.target.closest('nav'))t.checked=false;
-  });
-  document.querySelectorAll('.nav__links a').forEach(function(a){
-    a.addEventListener('click',function(){t.checked=false;});
+  if(t){
+    document.addEventListener('click',function(e){
+      if(t.checked&&!e.target.closest('nav'))t.checked=false;
+    });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=this.getAttribute('href').slice(1);
+      if(!id)return;
+      var el=document.getElementById(id);
+      if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+      if(t)t.checked=false;
+    });
   });
 })();
 </script>
